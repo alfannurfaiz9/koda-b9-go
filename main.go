@@ -5,12 +5,13 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/alfannurfaiz9/koda-b9-go.git/internal"
 	"github.com/alfannurfaiz9/koda-b9-go.git/internal/minitask"
 	"github.com/alfannurfaiz9/koda-b9-go.git/internal/model"
 )
 
 func main() {
-	choises()
+	internal.Choises()
 
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
@@ -27,17 +28,17 @@ func main() {
 			fmt.Printf("Func Gabungan, Luas = %d \n", luas)
 			fmt.Printf("Func Gabungan, Keliling = %d \n", keliling)
 			fmt.Println("--------------------------------")
-			choises()
+			internal.Choises()
 		case "2":
 			fmt.Println("--------------------------------")
 			minitask.PrintJendela(4, 8)
 			fmt.Println("--------------------------------")
-			choises()
+			internal.Choises()
 		case "3":
 			fmt.Println("--------------------------------")
 			minitask.PrintNum()
 			fmt.Println("--------------------------------")
-			choises()
+			internal.Choises()
 		case "4":
 			fmt.Println("--------------------------------")
 			alfan := model.Biodata{
@@ -54,27 +55,16 @@ func main() {
 			}
 			fmt.Println(alfan)
 			fmt.Println("--------------------------------")
-			choises()
+			internal.Choises()
 		default:
 			fmt.Println("--------------------------------")
 			fmt.Println("Pilihan tidak tersedia!")
 			fmt.Println("--------------------------------")
-			choises()
+			internal.Choises()
 		}
 	}
 
 	if err := scanner.Err(); err != nil {
 		fmt.Println("Error reading input:", err)
 	}
-}
-
-func choises() {
-	fmt.Println("--------------------------------")
-	fmt.Println("Masukkan pilihan:")
-	fmt.Println("1. Luas dan keliling persegi panjang")
-	fmt.Println("2. Print jendela")
-	fmt.Println("3. Sisipkan angka ke dalam slice")
-	fmt.Println("4. Biodata")
-	fmt.Println("0. Exit")
-	fmt.Println("--------------------------------")
 }
