@@ -17,6 +17,9 @@ func main() {
 	for scanner.Scan() {
 		switch scanner.Text() {
 		case "0":
+			fmt.Println("--------------------------------")
+			fmt.Println("Anda telah keluar!")
+			fmt.Println("--------------------------------")
 			return
 		case "1":
 			fmt.Println("--------------------------------")
