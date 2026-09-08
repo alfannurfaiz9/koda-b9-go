@@ -9,6 +9,9 @@ func Choises() {
 	fmt.Println("2. Print jendela")
 	fmt.Println("3. Sisipkan angka ke dalam slice")
 	fmt.Println("4. Biodata")
+	fmt.Println("5. Readfile")
+	fmt.Println("6. Print Person Struct")
+	fmt.Println("7. Payment")
 	fmt.Println("0. Keluar")
 	fmt.Println("--------------------------------")
 }
