@@ -59,6 +59,42 @@ func main() {
 			fmt.Println(alfan)
 			fmt.Println("--------------------------------")
 			internal.Choises()
+		case "5":
+			fmt.Println("--------------------------------")
+			minitask.ReadFile()
+			fmt.Println("--------------------------------")
+			internal.Choises()
+		case "6":
+			fmt.Println("--------------------------------")
+			alfan := model.NewPerson("Alfan", "Purwokerto", "62895350096363")
+			alfan.GetPerson()
+			alfan.Greet()
+			alfan.SetName("Alfan Nurfaiz")
+			alfan.Greet()
+			fmt.Println("--------------------------------")
+			internal.Choises()
+		case "7":
+			fmt.Println("--------------------------------")
+			listPrices := []int{0, 20000, 30000, 15000}
+
+			bank := minitask.Bank{}
+			online := minitask.Online{}
+			fiktif := minitask.Fiktif{}
+
+			bankRes, err := bank.Pay(listPrices)
+			onlineRes, err := online.Pay(listPrices)
+			fiktifRes, err := fiktif.Pay(listPrices)
+
+			if err != nil {
+				fmt.Println(err)
+			}
+
+			fmt.Println(bankRes)
+			fmt.Println(onlineRes)
+			fmt.Println(fiktif.GetList())
+			fmt.Println(fiktifRes)
+			fmt.Println("--------------------------------")
+			internal.Choises()
 		default:
 			fmt.Println("--------------------------------")
 			fmt.Println("Pilihan tidak tersedia!")
