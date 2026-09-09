@@ -7,7 +7,7 @@ import (
 )
 
 func Activity() {
-	var wg = sync.WaitGroup{}
+	var wg sync.WaitGroup
 
 	defer fmt.Println("Berangkat kerja")
 
