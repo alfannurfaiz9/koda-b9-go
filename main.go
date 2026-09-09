@@ -95,6 +95,11 @@ func main() {
 			fmt.Println(fiktifRes)
 			fmt.Println("--------------------------------")
 			internal.Choises()
+		case "8":
+			fmt.Println("--------------------------------")
+			minitask.Activity()
+			fmt.Println("--------------------------------")
+			internal.Choises()
 		default:
 			fmt.Println("--------------------------------")
 			fmt.Println("Pilihan tidak tersedia!")
